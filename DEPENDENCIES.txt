@@ -1,1 +1,2 @@
 https://github.com/ChillCube/InventoryGodot
+https://github.com/ChillCube/SmoothUI
