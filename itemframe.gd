@@ -1,6 +1,6 @@
 @tool
 @icon("res://addons/ItemFrame2D/icon_square.png")
-extends Sprite2D
+extends SmoothUI
 class_name ItemFrame2D
 
 @export var item : Item;
@@ -14,7 +14,9 @@ func _ensure_sprite():
 		item_sprite.global_position = global_position;
 
 func _process(delta: float) -> void:
+	super(delta)
 	_ensure_sprite();
+	item_sprite.global_position = global_position;
 	if item:
 		if item.sprite and item_sprite:
 			item_sprite.texture = item.sprite;
