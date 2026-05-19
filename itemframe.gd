@@ -1,6 +1,6 @@
 @tool
 @icon("res://addons/ItemFrame2D/icon_square.png")
-extends SmoothUI
+extends SelectableUI
 class_name ItemFrame2D
 
 @export var item : Item:
