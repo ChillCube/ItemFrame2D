@@ -3,10 +3,14 @@
 extends SelectableUI
 class_name ItemFrame2D
 
+signal item_changed(old_item: Item, new_item: Item) ## Emitted when the displayed item is replaced or cleared
+
 @export var item : Item: ## The item whose sprite is drawn inside this frame; set to null for an empty slot
 	set(val):
+		var old = item
 		item = val
 		queue_redraw()
+		item_changed.emit(old, val)
 
 @export var item_size : float = 1: ## Scale multiplier for the item sprite (1 = natural texture size)
 	set(val):

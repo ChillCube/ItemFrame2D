@@ -13,5 +13,10 @@ A node to visualize items on the screen, useful for inventory UI
 | **item** | `Item:` | `-` | The item whose sprite is drawn inside this frame; set to null for an empty slot |
 | **item_size** | `float` | `1` | Scale multiplier for the item sprite (1 = natural texture size) |
 
+### 🔔 Signals
+| Signal | Arguments | Description |
+| :--- | :--- | :--- |
+| **item_changed** | `old_item: Item`<br>`new_item: Item` |  Emitted when the displayed item is replaced or cleared |
+
 ---
 
