@@ -3,12 +3,12 @@
 extends SelectableUI
 class_name ItemFrame2D
 
-@export var item : Item:
+@export var item : Item: ## The item whose sprite is drawn inside this frame; set to null for an empty slot
 	set(val):
 		item = val
 		queue_redraw()
 
-@export var item_size : float = 1:
+@export var item_size : float = 1: ## Scale multiplier for the item sprite (1 = natural texture size)
 	set(val):
 		item_size = val
 		queue_redraw()
